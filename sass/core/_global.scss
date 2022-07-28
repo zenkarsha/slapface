@@ -1,0 +1,31 @@
+html, body {
+  height: 100%;
+}
+body {
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  background-color: $background-color;
+  color: $text-black;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+a {
+  @include link-colors($link-color, $link-color-hover);
+  @include hover-link;
+}
+#header {
+
+}
+#content {
+  position: relative;
+  height: initial;
+  margin-top: 70px;
+}
+#footer {
+  margin: rhythm(1.5) auto;
+  p {
+    font-size: 14px;
+    line-height: 1;
+  }
+}

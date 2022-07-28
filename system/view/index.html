@@ -1,0 +1,70 @@
+---
+$title
+$description
+$path
+---
+
+<div class="user-input row">
+  <div id="generator">
+    <h1>{{$title}}</h1>
+    <h2>{{$description}}</h2>
+
+    <form role="form" action="generate" id="coverForm" method="post">
+      <div class="col-sm-12">
+        <div id="coverbox">
+          <div id="coverprint"><img src="images/blackbg.png"></div>
+          <div id="loading" class="col-sm-12"></div>
+        </div>
+      </div>
+      <div id="settings" class="col-sm-12">
+        <div id="example">
+          <div class="row">
+            <div class="col-sm-7">
+              <label for="text1">打自己臉的人說過的話</label>
+              <textarea name="text1" id="text1" class="form-control" placeholder="請輸入打臉內文" style="min-height:182px;">讀取中</textarea>
+            </div>
+            <div class="col-sm-5 last">
+              <label for="sentence">選擇打誰的臉</label>
+              <select class="form-control" name="role" id="role"><option>讀取中</option></select>
+              <label for="text2">落款</label>
+              <input type="text" id="text2" class="form-control" name="text2" value="讀取中" placeholder="必填" style="width:100%">
+              <label for="text3">日期、出處、網址</label>
+              <input type="text" id="text3" class="form-control" name="text3" value="讀取中" placeholder="可選填" style="width:100%">
+            </div>
+          </div>
+        </div>
+      </div>
+      <input type="hidden" value="" name="source" id="source">
+      <input type="hidden" value="" name="directpost" id="directpost">
+      <input type="button" value="按此下載圖片" class="submit btn btn-default btn-lg" id="normalSubmit" style="margin-bottom:10px;">
+      <!-- <input type="button" value="將圖片發佈到 Facebook" class="submit btn btn-default btn-lg" id="facebookSubmit" style="margin-bottom:10px;"> -->
+      <div id="plzlike" class="plzlike" style="display:none">圖片產生成功，請幫忙按讚哦！謝謝。</div>
+    </form>
+  </div>
+</div>
+<!-- <div id="hideForm" class="row">
+  <div class="col-sm-12">
+    <a id="close"><img src="images/close.png"></a>
+    <h2 style="margin: 0 auto 10px;">打臉內容投稿</h2>
+    <label for="contribute_text1">打自己臉的人說過的話</label>
+    <textarea name="contribute_text1" id="contribute_text1" class="form-control" placeholder="請輸入打臉內文" rows="4"></textarea>
+    <label for="contribute_role">打誰的臉</label>
+    <input type="text" id="contribute_role" name="contribute_role" value="" placeholder="必填" style="width:100%" class="form-control">
+    <label for="contribute_text2">落款</label>
+    <input type="text" id="contribute_text2" name="contribute_text2" value="" placeholder="必填" style="width:100%" class="form-control">
+    <label for="contribute_text3">日期、出處、網址</label>
+    <input type="text" id="contribute_text3" name="contribute_text3" value="" placeholder="可選填" style="width:100%" class="form-control">
+    <label for="contribute_egg">佐證影片</label>
+    <input type="text" id="contribute_egg" name="contribute_egg" value="" placeholder="可選填" style="width:100%" class="form-control">
+    <input type="button" value="確認投稿" class="submit btn btn-success" id="contribute_submit" style="width:100%;margin-bottom:10px;">
+  </div>
+</div> -->
+<!-- <div id="pop">投稿完成</div> -->
+<div id="audio" style="position:fixed;left:10000%;bottom:10000%;"></div>
+<!-- <div class="contribute">
+  <img src="images/airplan.png" data-simpletooltip="init" title=" 投稿 " class="tip">
+</div> -->
+<form id="upload" method="post" action="uploader" enctype="multipart/form-data" style="display:none;">
+  <input type="file" name="upload" id="uploadInput" />
+  <input type="hidden" value="" id="filename" name="filename">
+</form>
